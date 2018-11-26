@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:local="clr-namespace:BigScreen.wpf.Core"
+        x:Class="BigScreen.wpf.Core.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="3840" Background="Transparent" WindowStyle="None" Left="0" Top="0" ResizeMode="NoResize" dx:ThemeManager.ThemeName="VS2017">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <ContentControl Grid.Column="0" prism:RegionManager.RegionName="ContentLeftRegion" />
+        <ContentControl Grid.Column="1" prism:RegionManager.RegionName="ContentMiddleRegion" >
+        </ContentControl>
+        <ContentControl Grid.Column="2" prism:RegionManager.RegionName="ContentRightRegion" />
+    </Grid>
+</Window>
