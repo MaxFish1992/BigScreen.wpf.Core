@@ -10,6 +10,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="3840" Background="Transparent" WindowStyle="None" Left="0" Top="0" ResizeMode="NoResize" dx:ThemeManager.ThemeName="VS2017Dark">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/bj.jpg"></ImageBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
