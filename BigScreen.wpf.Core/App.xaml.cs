@@ -1,13 +1,9 @@
-﻿using BigScreen.wpf.Modules;
+﻿using BigScreen.wpf.ModuleLeft;
+using BigScreen.wpf.ModuleMiddle;
+using BigScreen.wpf.ModuleRight;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Unity;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace BigScreen.wpf.Core
@@ -24,17 +20,39 @@ namespace BigScreen.wpf.Core
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            var moduleAType = typeof(ModulesManagerEx);
-            moduleCatalog.AddModule(new ModuleInfo()
+            var moduleLeftType = typeof(ModuleLeftMng);
+            var moduleMiddleType = typeof(ModuleMiddleMng);
+            var moduleRightType = typeof(ModuleRightMng);
+            //moduleCatalog.AddModule(
+            //    new ModuleInfo()
+            //    {
+            //        ModuleName = moduleLeftType.Name,
+            //        ModuleType = moduleLeftType.AssemblyQualifiedName,
+            //        InitializationMode = InitializationMode.OnDemand
+            //    }
+            //    );
+            moduleCatalog.AddGroup(InitializationMode.OnDemand, "", new ModuleInfo[]
             {
-                ModuleName = moduleAType.Name,
-                ModuleType = moduleAType.AssemblyQualifiedName,
-                InitializationMode = InitializationMode.OnDemand
+                new ModuleInfo(){
+                    ModuleName = moduleLeftType.Name,
+                    ModuleType = moduleLeftType.AssemblyQualifiedName,
+                    InitializationMode = InitializationMode.OnDemand
+                },
+                new ModuleInfo(){
+                    ModuleName = moduleMiddleType.Name,
+                    ModuleType = moduleMiddleType.AssemblyQualifiedName,
+                    InitializationMode = InitializationMode.OnDemand
+                },
+                new ModuleInfo(){
+                    ModuleName = moduleRightType.Name,
+                    ModuleType = moduleRightType.AssemblyQualifiedName,
+                    InitializationMode = InitializationMode.OnDemand
+                }
             });
         }
     }

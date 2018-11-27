@@ -8,7 +8,7 @@
         xmlns:local="clr-namespace:BigScreen.wpf.Core"
         x:Class="BigScreen.wpf.Core.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="3840" Background="Transparent" WindowStyle="None" Left="0" Top="0" ResizeMode="NoResize" dx:ThemeManager.ThemeName="VS2017">
+        Title="MainWindow" Height="1080" Width="3840" Background="Transparent" WindowStyle="None" Left="0" Top="0" ResizeMode="NoResize" dx:ThemeManager.ThemeName="VS2017Dark">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>

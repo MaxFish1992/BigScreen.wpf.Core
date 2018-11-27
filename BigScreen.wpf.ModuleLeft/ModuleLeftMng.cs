@@ -1,23 +1,17 @@
-﻿using BigScreen.wpf.Modules.Views;
+﻿using BigScreen.wpf.ModuleLeft.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BigScreen.wpf.Modules
+namespace BigScreen.wpf.ModuleLeft
 {
-    public class ModulesManagerEx : IModule
+    public class ModuleLeftMng : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var regionManager = containerProvider.Resolve<IRegionManager>();
             regionManager.RegisterViewWithRegion("ContentLeftRegion", typeof(ViewLeft));
-            regionManager.RegisterViewWithRegion("ContentMiddleRegion", typeof(ViewMiddle));
-            regionManager.RegisterViewWithRegion("ContentRightRegion", typeof(ViewRight));
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

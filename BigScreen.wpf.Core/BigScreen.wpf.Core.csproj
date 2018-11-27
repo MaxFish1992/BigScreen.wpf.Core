@@ -130,9 +130,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BigScreen.wpf.Modules\BigScreen.wpf.Modules.csproj">
-      <Project>{c6933dd6-ccad-4432-a60d-e00225ea7bca}</Project>
-      <Name>BigScreen.wpf.Modules</Name>
+    <ProjectReference Include="..\BigScreen.wpf.ModuleLeft\BigScreen.wpf.ModuleLeft.csproj">
+      <Project>{651be489-e46c-47f7-a727-cfe8dcb719fd}</Project>
+      <Name>BigScreen.wpf.ModuleLeft</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigScreen.wpf.ModuleMiddle\BigScreen.wpf.ModuleMiddle.csproj">
+      <Project>{40b35544-e083-4231-91bf-41654ff81173}</Project>
+      <Name>BigScreen.wpf.ModuleMiddle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BigScreen.wpf.ModuleRight\BigScreen.wpf.ModuleRight.csproj">
+      <Project>{f7199a74-8aef-4d3a-8b71-7cfc89a2ea62}</Project>
+      <Name>BigScreen.wpf.ModuleRight</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("BigScreen.wpf.Modules")]
+[assembly: AssemblyTitle("BigScreen.wpf.ModuleMiddle")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BigScreen.wpf.Modules")]
+[assembly: AssemblyProduct("BigScreen.wpf.ModuleMiddle")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("c6933dd6-ccad-4432-a60d-e00225ea7bca")]
+[assembly: Guid("40b35544-e083-4231-91bf-41654ff81173")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

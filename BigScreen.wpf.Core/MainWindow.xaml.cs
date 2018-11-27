@@ -15,7 +15,9 @@ namespace BigScreen.wpf.Core
             _moduleManager = moduleManager;
             if (_moduleManager != null)
             {
-                _moduleManager.LoadModule("ModulesManagerEx");
+                _moduleManager.LoadModule("ModuleLeftMng");
+                _moduleManager.LoadModule("ModuleMiddleMng");
+                _moduleManager.LoadModule("ModuleRightMng");
             }
         }
     }

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace BigScreen.wpf.Modules.Views
+namespace BigScreen.wpf.ModuleLeft.Views
 {
     /// <summary>
-    /// ViewRight.xaml 的交互逻辑
+    /// ViewLeft.xaml 的交互逻辑
     /// </summary>
-    public partial class ViewRight : UserControl
+    public partial class ViewLeft : UserControl
     {
-        public ViewRight()
+        public ViewLeft()
         {
             InitializeComponent();
         }
