@@ -74,6 +74,9 @@
     <Compile Include="Views\ViewRight.xaml.cs">
       <DependentUpon>ViewRight.xaml</DependentUpon>
     </Compile>
+	<Compile Include="Views\ViewRightViewModel.cs">
+      <DependentUpon>ViewRight.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

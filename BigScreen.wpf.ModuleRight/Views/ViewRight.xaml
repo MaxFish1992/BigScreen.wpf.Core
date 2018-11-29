@@ -4,9 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BigScreen.wpf.ModuleRight.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="View Right" FontSize="38" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="{Binding Title}" FontSize="38" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
 </UserControl>

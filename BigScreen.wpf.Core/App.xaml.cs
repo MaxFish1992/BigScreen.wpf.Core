@@ -3,7 +3,10 @@ using BigScreen.wpf.ModuleMiddle;
 using BigScreen.wpf.ModuleRight;
 using Prism.Ioc;
 using Prism.Modularity;
+using Prism.Mvvm;
 using Prism.Unity;
+using System;
+using System.Reflection;
 using System.Windows;
 
 namespace BigScreen.wpf.Core
@@ -28,14 +31,6 @@ namespace BigScreen.wpf.Core
             var moduleLeftType = typeof(ModuleLeftMng);
             var moduleMiddleType = typeof(ModuleMiddleMng);
             var moduleRightType = typeof(ModuleRightMng);
-            //moduleCatalog.AddModule(
-            //    new ModuleInfo()
-            //    {
-            //        ModuleName = moduleLeftType.Name,
-            //        ModuleType = moduleLeftType.AssemblyQualifiedName,
-            //        InitializationMode = InitializationMode.OnDemand
-            //    }
-            //    );
             moduleCatalog.AddGroup(InitializationMode.OnDemand, "", new ModuleInfo[]
             {
                 new ModuleInfo(){
@@ -53,6 +48,19 @@ namespace BigScreen.wpf.Core
                     ModuleType = moduleRightType.AssemblyQualifiedName,
                     InitializationMode = InitializationMode.OnDemand
                 }
+            });
+        }
+
+        protected override void ConfigureViewModelLocator()
+        {
+            base.ConfigureViewModelLocator();
+
+            ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver((viewType) =>
+            {
+                var viewName = viewType.FullName;
+                var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;
+                var viewModelName = $"{viewName}ViewModel, {viewAssemblyName}";
+                return Type.GetType(viewModelName);
             });
         }
     }

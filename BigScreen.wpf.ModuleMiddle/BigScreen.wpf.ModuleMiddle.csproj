@@ -74,6 +74,9 @@
     <Compile Include="Views\ViewMiddle.xaml.cs">
       <DependentUpon>ViewMiddle.xaml</DependentUpon>
     </Compile>
+	<Compile Include="Views\ViewMiddleViewModel.cs">
+      <DependentUpon>ViewMiddle.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

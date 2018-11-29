@@ -74,6 +74,9 @@
     <Compile Include="Views\ViewLeft.xaml.cs">
       <DependentUpon>ViewLeft.xaml</DependentUpon>
     </Compile>
+	<Compile Include="Views\ViewLeftViewModel.cs">
+      <DependentUpon>ViewLeft.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
